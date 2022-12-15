@@ -11,7 +11,7 @@ from imblearn.over_sampling import SMOTE
 import seaborn as sns
 import folium
 
-import plotly as go
+import plotly as gol
 import plotly.graph_objects as gog
 import plotly.express as px
 
@@ -82,7 +82,7 @@ def candle_plot(df):
      precio de entrada "Open", pico más alto del dia "High", el pico de bajada del dia "Low", y el precio del cierre
      "Close", necesitas tener el DataFrame con esas columnas definidas.
     '''
-    fig = go.Figure(data=[go.Candlestick(x=df['Date'],
+    fig = gol.Figure(data=[gol.Candlestick(x=df['Date'],
                 open=df['Open'],
                 high=df['High'],
                 low=df['Low'],
@@ -92,31 +92,31 @@ def candle_plot(df):
 
 def grafica_creator(df):
     # Se inicializa la figura de plotly
-    fig = go.Figure()
+    fig = gol.Figure()
     name = str(df['Codigo empresa'].unique())
     # Aquí se agregan los diferentes Scatter, o graficas lineales, que se hace un deploy de 4 graficas manejadas por Botones
 
     fig.add_trace(
-        go.Scatter(x=list(df.index),
+        gol.Scatter(x=list(df.index),
                    y=list(df.High),
                    name="High",
                    line=dict(color="#33CFA5")))
 
     fig.add_trace(
-        go.Scatter(x=list(df.index),
+        gol.Scatter(x=list(df.index),
                    y=[df.High.mean()] * len(df.index),
                    name="High Average",
                    visible=False,
                    line=dict(color="#33CFA5", dash="dash")))
 
     fig.add_trace(
-        go.Scatter(x=list(df.index),
+        gol.Scatter(x=list(df.index),
                    y=list(df.Low),
                    name="Low",
                    line=dict(color="#F06A6A")))
 
     fig.add_trace(
-        go.Scatter(x=list(df.index),
+        gol.Scatter(x=list(df.index),
                    y=[df.Low.mean()] * len(df.index),
                    name="Low Average",
                    visible=False,
@@ -296,8 +296,8 @@ def Line_Line_bar_party(x, y, y1, label_x="x",
 
     # Linechart+barchart
     plt.subplot(233)
-    plt.bar(x, y, color=barcolor);
-    plt.plot(x, y, linestyle="--");
+    plt.bar(x, y, color=barcolor)
+    plt.plot(x, y, linestyle="--")
     plt.plot(x, y, linestyle="--", color=linecolor_y, label=label_y)
     plt.plot(x, y1, linestyle="--", color=linecolor_y1, label=label_y1)
     plt.xlabel(label_x)
@@ -305,7 +305,7 @@ def Line_Line_bar_party(x, y, y1, label_x="x",
     plt.legend(loc="upper right")
     plt.locator_params(axis="x", nbins=len(x))
 
-    plt.show()
+    plt.show();
     return
 
 
