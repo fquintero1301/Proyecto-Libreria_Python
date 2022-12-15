@@ -5,7 +5,8 @@ setup(
     name= 'datascienceproyect',
     version= '0.0.1',
     license= 'MIT',
-    long_description= 'Librería para limpieza y visualización de datos, y Machine learning',
+    description= 'Librería para limpieza y visualización de datos, y Machine learning',
+    long_description= open('README.md').read(),
     author= 'Clase Data Science The Bridge Septiembre 2022',
     url= 'https://github.com/LLBF/Proyecto_libreria_DS',
     classifiers=[
