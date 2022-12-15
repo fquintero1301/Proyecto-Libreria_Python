@@ -11,8 +11,8 @@ from imblearn.over_sampling import SMOTE
 import seaborn as sns
 import folium
 
-import plotly as gol
-import plotly.graph_objects as gog
+import plotly as py
+import plotly.graph_objects as go
 import plotly.express as px
 
 
@@ -82,7 +82,7 @@ def candle_plot(df):
      precio de entrada "Open", pico más alto del dia "High", el pico de bajada del dia "Low", y el precio del cierre
      "Close", necesitas tener el DataFrame con esas columnas definidas.
     '''
-    fig = gol.Figure(data=[gol.Candlestick(x=df['Date'],
+    fig = py.Figure(data=[py.Candlestick(x=df['Date'],
                 open=df['Open'],
                 high=df['High'],
                 low=df['Low'],
@@ -92,31 +92,31 @@ def candle_plot(df):
 
 def grafica_creator(df):
     # Se inicializa la figura de plotly
-    fig = gol.Figure()
+    fig = py.Figure()
     name = str(df['Codigo empresa'].unique())
     # Aquí se agregan los diferentes Scatter, o graficas lineales, que se hace un deploy de 4 graficas manejadas por Botones
 
     fig.add_trace(
-        gol.Scatter(x=list(df.index),
+        py.Scatter(x=list(df.index),
                    y=list(df.High),
                    name="High",
                    line=dict(color="#33CFA5")))
 
     fig.add_trace(
-        gol.Scatter(x=list(df.index),
+        py.Scatter(x=list(df.index),
                    y=[df.High.mean()] * len(df.index),
                    name="High Average",
                    visible=False,
                    line=dict(color="#33CFA5", dash="dash")))
 
     fig.add_trace(
-        gol.Scatter(x=list(df.index),
+        py.Scatter(x=list(df.index),
                    y=list(df.Low),
                    name="Low",
                    line=dict(color="#F06A6A")))
 
     fig.add_trace(
-        gol.Scatter(x=list(df.index),
+        py.Scatter(x=list(df.index),
                    y=[df.Low.mean()] * len(df.index),
                    name="Low Average",
                    visible=False,
@@ -649,14 +649,14 @@ def vis_line(df, ejex, ejey, group="", type=0):
     --> type: int, argumento opcional que nos permite decidir que tipo de line chart queremos utilizar, 0 para líneas y marcadores,
     1 para solo líneas y 2 u otro número para solo marcadores. Por defecto está activada la opción 0 para líneas y marcadores.
     """
-    fig = gog.Figure()
+    fig = go.Figure()
     if group != "":
         grupos = df[group].unique()
         if type==0:
             for grupo in grupos:
                 x = df[df[group].values == grupo][ejex]
                 y = df[df[group].values == grupo][ejey]
-                fig.add_trace(gog.Scatter(x=x, y=y,
+                fig.add_trace(go.Scatter(x=x, y=y,
                 mode="lines+markers",
                 name=grupo
                     ))
@@ -664,7 +664,7 @@ def vis_line(df, ejex, ejey, group="", type=0):
             for grupo in grupos:
                 x = df[df[group].values == grupo][ejex]
                 y = df[df[group].values == grupo][ejey]
-                fig.add_trace(gog.Scatter(x=x, y=y,
+                fig.add_trace(go.Scatter(x=x, y=y,
                 mode="lines",
                 name=grupo
                     ))
@@ -672,20 +672,20 @@ def vis_line(df, ejex, ejey, group="", type=0):
             for grupo in grupos:
                 x = df[df[group].values == grupo][ejex]
                 y = df[df[group].values == grupo][ejey]
-                fig.add_trace(gog.Scatter(x=x, y=y,
+                fig.add_trace(go.Scatter(x=x, y=y,
                 mode="markers",
                 name=grupo
                     ))
 
     else:
         if type == 0:
-            fig.add_trace(gog.Scatter(x=df[ejex], y=df[ejey],
+            fig.add_trace(go.Scatter(x=df[ejex], y=df[ejey],
                                      mode="lines+markers"))
         elif type == 1:
-            fig.add_trace(gog.Scatter(x=df[ejex], y=df[ejey],
+            fig.add_trace(go.Scatter(x=df[ejex], y=df[ejey],
                                      mode="lines"))
         else:
-            fig.add_trace(gog.Scatter(x=df[ejex], y=df[ejey],
+            fig.add_trace(go.Scatter(x=df[ejex], y=df[ejey],
                                      mode="markers"))
     return fig
 
