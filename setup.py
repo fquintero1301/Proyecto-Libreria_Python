@@ -6,7 +6,7 @@ setup(
     version= '0.0.1',
     license= 'MIT',
     long_description= 'Librería para limpieza y visualización de datos, y Machine learning',
-    author= 'Varios',
+    author= 'Clase Data Science The Bridge Septiembre 2022',
     url= 'https://github.com/LLBF/Proyecto_libreria_DS',
     classifiers=[
         "Programming Language :: Python :: 3",
