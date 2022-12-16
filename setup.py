@@ -15,5 +15,7 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         ],
-    python_requires= '>=3.7'
+    python_requires= '>=3.7',
+    install_requires= ['numpy', 'pandas', 'matplotlib', 'plotly', 'scikit-learn', 'imbalanced-learn',
+                       'seaborn', 'folium','selenium', 'requests', 'pillow', 'opencv-python', 'unidecode'],
 )
