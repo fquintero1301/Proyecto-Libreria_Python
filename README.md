@@ -6,7 +6,7 @@ Libreria creada desde la experiencia personal de cada participante durante el Bo
 
 ### Limpieza
 
-# En esta etapa. se trabajan funciones de limpieza de datos.
+#### En esta etapa. se trabajan funciones de limpieza de datos.
 
 read_it(url)
 google_img(path_api, urls, directory_names, directory_path)
@@ -30,7 +30,7 @@ ratio_nulos(data, features)
 
 ### Visualización
 
-# En esta etapa. se trabajan funciones de visualización de datos.
+#### En esta etapa. se trabajan funciones de visualización de datos.
 
 visualize_data(x, y)
 s_temporal(df, a, y)
@@ -39,7 +39,7 @@ candle_plot(df)
 grafica_creator(df)
 grid_creator(data, x, y, hue)
 Line_Line_bar_party(x, y, y1, label_x="x", label_y="y", label_y1="y1", plotsize=(20, 12), barcolor="grey", linecolor_y="green" linecolor_y1="b")
-balanced_target(X_train, y_train)
+balanced_target(X_train, y_train) Francisco Quintero
 feature_importances_visualization(best_estimator, X_train, plotsize=(20, 10))
 matrices_comparadas(y, x_test_scaled, y_test, nombre_modelo, y_2, x_test_scaled_2, y_test_2, nombre_modelo_2, size)
 plot_matriz_confusion(y, x_test_scaled, y_test, nombre_modelo, size)
@@ -55,7 +55,7 @@ pca_visualization(df)
 
 ### Machine Learning
 
-# En esta etapa. se trabajan funciones de automatización para Machine Learning.
+#### En esta etapa. se trabajan funciones de automatización para Machine Learning.
 
 my_pca(n_components, df)
 my_kmeans(n_clusters, df)
