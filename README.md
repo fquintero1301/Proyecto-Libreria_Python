@@ -1,9 +1,12 @@
 # LIBRERÍA DE LA CLASE DE LA CLASE DE DATA SCIENCE DE THE BRIDGE, GRUPO DE SEPTIEMBRE 2022 MODALIDAD FULL TIME
 
-## Esta librería incluye funciones de limpieza, visualización y machine learning
+##Esta librería incluye funciones de limpieza, visualización y machine learning
 
+Libreria creada desde la experiencia personal de cada participante durante el Bootcamp Data Science
 
 ### Limpieza
+
+# En esta etapa. se trabajan funciones de limpieza de datos.
 
 read_it(url)
 google_img(path_api, urls, directory_names, directory_path)
@@ -27,6 +30,8 @@ ratio_nulos(data, features)
 
 ### Visualización
 
+# En esta etapa. se trabajan funciones de visualización de datos.
+
 visualize_data(x, y)
 s_temporal(df, a, y)
 comparacion_stemporal(train, test, prediction, lower_series, upper_series)
@@ -49,6 +54,8 @@ pca_visualization(df)
 
 
 ### Machine Learning
+
+# En esta etapa. se trabajan funciones de automatización para Machine Learning.
 
 my_pca(n_components, df)
 my_kmeans(n_clusters, df)
