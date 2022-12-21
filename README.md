@@ -1,6 +1,6 @@
 # LIBRERÍA DE LA CLASE DE LA CLASE DE DATA SCIENCE DE THE BRIDGE, GRUPO DE SEPTIEMBRE 2022 MODALIDAD FULL TIME
 
-##Esta librería incluye funciones de limpieza, visualización y machine learning
+## Esta librería incluye funciones de limpieza, visualización y machine learning
 
 Libreria creada desde la experiencia personal de cada participante durante el Bootcamp Data Science
 
