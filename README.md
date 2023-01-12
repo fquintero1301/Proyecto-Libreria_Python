@@ -2,7 +2,7 @@
 
 ## Esta librería incluye funciones de limpieza, visualización y machine learning
 
-Libreria creada desde la experiencia personal de cada participante durante el Bootcamp Data Science
+librería creada desde la experiencia personal de cada participante durante el Bootcamp Data Science
 
 ### Limpieza
 
